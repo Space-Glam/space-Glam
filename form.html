@@ -5,8 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Glam</title>
+    <title>Comunidad</title>
     <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="shortcut icon" href="./public/img/favicon.svg" type="image/x-icon">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZQRSD2RW3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QZQRSD2RW3');
+    </script>
 </head>
 
 <body>
@@ -58,7 +67,7 @@
                             <input type="email" name="email" id="" placeholder="Correo electrónico" required>
                         </div>
                     </section>
-                    <button class="button button--yellow">
+                    <button class="button button--yellow form__btn">
                         <p>Estoy interesado(a) en recibir información</p>
                     </button>
                 </section>
@@ -171,6 +180,7 @@
         const modal = document.querySelector(".modal")
         const modalcloseBtn = modal.querySelector(".modal__closeBtn")
         const form = document.querySelector(".form")
+        const submitBtn = form.querySelector(".form__btn")
 
         modalcloseBtn.addEventListener('click', () => {
             modal.classList.add("hidden")
@@ -193,7 +203,9 @@
             event.preventDefault()
             const name = form.name.value
             const email = form.email.value
+            submitBtn.disabled = true;
             register(name, email).then((ref) => {
+                submitBtn.disabled = false;
                 modal.classList.remove("hidden")
                 form.name.value = ""
                 form.email.value = ""
