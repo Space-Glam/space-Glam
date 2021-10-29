@@ -47,11 +47,11 @@
                     <section class="form__fields">
                         <div class="input">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="" placeholder="Nombre completo">
+                            <input type="text" name="name" id="" placeholder="Nombre completo" required>
                         </div>
                         <div class="input">
                             <label for="email">Correo</label>
-                            <input type="email" name="email" id="" placeholder="Correo electrónico">
+                            <input type="email" name="email" id="" placeholder="Correo electrónico" required>
                         </div>
                     </section>
                     <button class="button button--yellow">
@@ -125,7 +125,7 @@
             </section>
         </article>
     </footer>
-    <div class="modal">
+    <div class="modal hidden">
         <section class="modal__container">
             <section class="modal__box">
                 <section class="modal__content">
@@ -143,5 +143,6 @@
             </section>
         </section>
     </div>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>
