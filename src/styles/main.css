@@ -1654,6 +1654,11 @@ html, body {
   background-color: #2A2850;
 }
 
+.noOverflow {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .hidden {
   display: none;
 }

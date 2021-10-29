@@ -177,6 +177,7 @@
         const analytics = getAnalytics(app);
         const db = getFirestore(app);
 
+        const body = document.querySelector("body")
         const modal = document.querySelector(".modal")
         const modalcloseBtn = modal.querySelector(".modal__closeBtn")
         const form = document.querySelector(".form")
@@ -184,6 +185,7 @@
 
         modalcloseBtn.addEventListener('click', () => {
             modal.classList.add("hidden")
+            body.classList.remove("noOverflow")
         })
 
         async function register(newName, newEmail) {
@@ -207,6 +209,7 @@
             register(name, email).then((ref) => {
                 submitBtn.disabled = false;
                 modal.classList.remove("hidden")
+                body.classList.add("noOverflow")
                 form.name.value = ""
                 form.email.value = ""
             });
