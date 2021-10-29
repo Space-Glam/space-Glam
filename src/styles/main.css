@@ -364,7 +364,7 @@ input[type=button] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 90vh;
+  padding: 40px 0;
 }
 
 .banner__container {
@@ -485,11 +485,6 @@ input[type=button] {
 }
 
 @media (max-width: 999px) {
-  .banner {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
   .banner__container {
     background-size: 500px;
     background-position-x: center;
@@ -849,7 +844,7 @@ input[type=button] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 75vh;
+  padding: 40px 0;
 }
 
 .footerBanner__container {
@@ -949,10 +944,7 @@ input[type=button] {
 
 @media (max-width: 1020px) {
   .footerBanner {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding-top: 20px;
+    padding-top: 20px 0;
   }
   .footerBanner__container {
     -ms-flex-wrap: wrap;
@@ -1525,7 +1517,7 @@ input[type=button] {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 @media (max-width: 694px) {

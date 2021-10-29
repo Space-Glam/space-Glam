@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75vh;
+    padding: 40px 0;
 
     &__container {
         width: 100%;
@@ -79,8 +79,7 @@
 
 @media (max-width: 1020px) {
     .footerBanner {
-        height: fit-content;
-        padding-top: 20px;
+        padding-top: 20px 0;
 
         &__container {
             flex-wrap: wrap;
