@@ -2,16 +2,18 @@
     outline: none;
     border: none;
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 20px 30px;
     width: 100%;
     max-width: 345px;
     transition: all ease-in 0.2s;
+    display: flex;
 
     p {
         font-family: $poppinsFont;
         font-weight: $semibold;
         font-size: $fontSizeHeader;
         text-align: center;
+        width: 100%;
     }
 
     &--yellow {

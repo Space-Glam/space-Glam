@@ -824,13 +824,13 @@ input[type=button] {
 
 @media (max-width: 480px) {
   .expertBanner .button {
-    max-width: none !important;
+    max-width: none;
   }
 }
 
 @media (max-width: 328px) {
   .expertBanner .button p {
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
   }
 }
 
@@ -1201,15 +1201,240 @@ input[type=button] {
   }
 }
 
+.form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90vh;
+}
+
+.form__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.375rem;
+  font-weight: 700;
+  color: #8569D7;
+}
+
+.form__text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin: 30px 0;
+  width: 100%;
+  max-width: 465px;
+}
+
+.form__fields {
+  width: 100%;
+  max-width: 465px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.form__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form .button {
+  max-width: 330px;
+}
+
+@media (max-width: 1040px) {
+  .form {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .form__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .form__info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form__title {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+  .form__image {
+    padding: 30px 20px;
+  }
+  .form__text {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0px;
+  }
+  .form__fields {
+    max-width: none;
+  }
+  .form .button {
+    max-width: none;
+    padding: 20px;
+  }
+  .form .button p {
+    font-size: 1.15rem !important;
+  }
+}
+
+@media (max-width: 999px) {
+  .form {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .form__container {
+    background-size: 500px;
+    background-position-x: center;
+  }
+  .form__title {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 525px) {
+  .form__container {
+    background-size: 420px;
+  }
+  .form__title {
+    font-size: 1.395rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .form__container {
+    background-size: 330px;
+  }
+}
+
+.note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.note__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #F59FAF;
+  margin-right: 20px;
+}
+
+.note__message {
+  background-color: #F59FAF;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 375px;
+}
+
+.note__message p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  color: white;
+}
+
 .button {
   outline: none;
   border: none;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 20px 30px;
   width: 100%;
   max-width: 345px;
   -webkit-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .button p {
@@ -1217,6 +1442,7 @@ input[type=button] {
   font-weight: 600;
   font-size: 1.25rem;
   text-align: center;
+  width: 100%;
 }
 
 .button--yellow {
@@ -1242,6 +1468,51 @@ input[type=button] {
         max-width: none;
     }
 }*/
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.input label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #6FD2DB;
+}
+
+.input input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  color: #2A2850;
+  border: 2px solid #8569D7;
+  outline: none;
+  border-radius: 13px;
+  padding: 15px 26px;
+}
+
+.input input::-webkit-input-placeholder {
+  color: #909090;
+}
+
+.input input:-ms-input-placeholder {
+  color: #909090;
+}
+
+.input input::-ms-input-placeholder {
+  color: #909090;
+}
+
+.input input::placeholder {
+  color: #909090;
+}
+
 html, body {
   width: 100%;
 }
@@ -1258,5 +1529,9 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main--darkBlue {
+  background-color: #2A2850;
 }
 /*# sourceMappingURL=main.css.map */

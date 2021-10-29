@@ -63,7 +63,7 @@
 @media (max-width: 480px) {
     .expertBanner {
         .button {
-           max-width: none !important;
+           max-width: none;
         }
     }
 }
@@ -72,7 +72,7 @@
     .expertBanner {
         .button {
             p {
-                font-size: 1.2rem !important;
+                font-size: 1.2rem;
             }
         }
     }
