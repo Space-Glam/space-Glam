@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Space Glam</title>
     <link rel="stylesheet" href="./src/styles/main.css">
 </head>
+
 <body>
     <header class="header">
         <article class="header__container">
@@ -36,7 +38,9 @@
                         ¡Te damos la bienvenida a nuestra comunidad!
                     </h2>
                     <p class="form__text">
-                        Amplia tu conocimiento en maquillaje e intercambia experiencias en la comunidad más grande el maquillaje. Solo déjanos tus datos y permanece atento(a) a nuestro lanzamiento con grandes beneficios.
+                        Amplia tu conocimiento en maquillaje e intercambia experiencias en la comunidad más grande el
+                        maquillaje. Solo déjanos tus datos y permanece atento(a) a nuestro lanzamiento con grandes
+                        beneficios.
                     </p>
                     <section class="note">
                         <p class="note__title">Nota:</p>
@@ -143,6 +147,60 @@
             </section>
         </section>
     </div>
-    <script src="./src/scripts/main.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+        import { collection, doc, addDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB1s9J_ZqnSv02_-Ip02G_7JwEB8F83Row",
+            authDomain: "space-glam.firebaseapp.com",
+            projectId: "space-glam",
+            storageBucket: "space-glam.appspot.com",
+            messagingSenderId: "118360549803",
+            appId: "1:118360549803:web:d65db5cec9c15414e9caee",
+            measurementId: "G-QZQRSD2RW3"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        const modal = document.querySelector(".modal")
+        const modalcloseBtn = modal.querySelector(".modal__closeBtn")
+        const form = document.querySelector(".form")
+
+        modalcloseBtn.addEventListener('click', () => {
+            modal.classList.add("hidden")
+        })
+
+        async function register(newName, newEmail) {
+            try {
+                const docRef = await addDoc(collection(db, "users"), {
+                    username: newName,
+                    useremail: newEmail,
+                    date: Date.now()
+                });
+                console.log("Document written with ID: ", docRef.id);
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const name = form.name.value
+            const email = form.email.value
+            register(name, email).then((ref) => {
+                modal.classList.remove("hidden")
+                form.name.value = ""
+                form.email.value = ""
+            });
+        })
+
+    </script>
 </body>
+
 </html>
