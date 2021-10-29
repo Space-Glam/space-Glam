@@ -1,0 +1,26 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+@import "measure";
+@import "header";
+@import "banner";
+@import "section";
+@import "benefit";
+@import "requirement";
+@import "expertBanner";
+@import "footerBanner";
+@import "footer";
+@import "siteMap";
+@import "copyRight";
+@import "button";
+
+html, body {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
