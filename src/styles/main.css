@@ -829,6 +829,293 @@ input[type=button] {
   }
 }
 
+.plansBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-image: url("./../../public/img/expertbanner.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.plansBanner__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.plansBanner__info {
+  width: 100%;
+  max-width: 598px;
+}
+
+.plansBanner__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: white;
+}
+
+@media (max-width: 1020px) {
+  .plansBanner {
+    background-position: 70%;
+  }
+  .plansBanner__title {
+    font-size: 1.7rem;
+  }
+  .plansBanner__text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.375rem;
+    color: white;
+    margin: 20px 0;
+  }
+  .plansBanner__plans {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .plansBanner .button {
+    max-width: none;
+  }
+}
+
+@media (max-width: 328px) {
+  .plansBanner .button p {
+    font-size: 1.2rem;
+  }
+}
+
+.plansContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plansContent__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  padding-top: 50px;
+}
+
+.plansContent__description {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.plansContent__description p {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #8569D7;
+  text-align: left;
+  width: 100%;
+  max-width: 800px;
+}
+
+.plansContent__instructions {
+  width: 100%;
+}
+
+.plansContent__instructions p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #4F4F4F;
+  margin-top: 20px;
+}
+
+.plansContent__plans {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+}
+
+.plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.plan__number {
+  width: 99px;
+  margin-bottom: 20px;
+}
+
+.plan__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plan__icon {
+  width: 100%;
+  max-width: 94px;
+}
+
+.plan__icon img {
+  max-width: none;
+}
+
+.plan__titles {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.plan__titles p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #4F4F4F;
+}
+
+.plan__type {
+  font-size: 1rem;
+}
+
+.plan__price {
+  margin-top: -5px;
+  font-size: 1.5625rem;
+}
+
+.plan__duration {
+  font-size: 1.125rem;
+  margin-top: -10px;
+}
+
+.plan__content {
+  width: 100%;
+  border: 2px solid #6FD2DB;
+  border-radius: 30px;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+}
+
+.plan__benefits {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plan__list {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.plan__list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4F4F4F;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.plan__list li:before {
+  content: "-";
+  padding-right: 5px;
+}
+
 .footerBanner {
   width: 100%;
   display: -webkit-box;
@@ -1545,7 +1832,7 @@ input[type=button] {
   outline: none;
   border: none;
   border-radius: 30px;
-  padding: 20px 30px;
+  padding: 10px 30px;
   width: 100%;
   max-width: 345px;
   -webkit-transition: all ease-in 0.2s;
@@ -1571,14 +1858,32 @@ input[type=button] {
   color: #8569D7;
 }
 
-.button:hover {
+.button--yellow:hover {
   background-color: #8569D7;
   -webkit-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
 }
 
-.button:hover p {
+.button--yellow:hover p {
   color: #F8DC71;
+}
+
+.button--purple {
+  background-color: #8569D7;
+}
+
+.button--purple p {
+  color: #F8DC71;
+}
+
+.button--purple:hover {
+  background-color: #F8DC71;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+
+.button--purple:hover p {
+  color: #8569D7;
 }
 
 /*@media (max-width: 1000px) {

@@ -1,0 +1,94 @@
+.plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+
+    &__number {
+        width: 99px;
+        margin-bottom: 20px;
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 100%;
+        max-width: 94px;
+
+        img {
+            max-width: none;
+        }
+    }
+
+    &__titles {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        p {
+            font-family: $poppinsFont;
+            font-weight: $semibold;
+            color: $darkGray;
+        }
+    }
+
+    &__type {
+        font-size: 1rem;
+    }
+
+    &__price {
+        margin-top: -5px;
+        font-size: 1.5625rem;
+    }
+
+    &__duration {
+        font-size: 1.125rem;
+        margin-top: -10px;
+    }
+
+    &__content {
+        width: 100%;
+        border: 2px solid $cyan;
+        border-radius: 30px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+    }
+
+    &__benefits {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list {
+        width: 100%;
+        padding: 20px 0;
+
+        li {
+            font-family: $poppinsFont;
+            font-size: 0.875rem;
+            font-weight: $light;
+            color: $darkGray;
+            padding-left: 1em;
+            text-indent: -1em;
+
+            &:before {
+                content: "-";
+                padding-right: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.plansContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        max-width: $containerMaxWidth;
+        padding: $containerPadding;
+        padding-top: 50px;
+    }
+
+    &__description {
+        width: 100%;
+        padding-bottom: 20px;
+        p {
+            font-family: $poppinsFont;
+            font-size: $fontSizeExpertTitle;
+            color: $purple;
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+
+    &__instructions {
+        width: 100%;
+        
+        p {
+            font-family: $poppinsFont;
+            font-size: $fontSizeRequirement;
+            color: $darkGray;
+            margin-top: 20px;
+        }
+    }
+
+    &__plans {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+}

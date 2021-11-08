@@ -2,7 +2,7 @@
     outline: none;
     border: none;
     border-radius: 30px;
-    padding: 20px 30px;
+    padding: 10px 30px;
     width: 100%;
     max-width: 345px;
     transition: all ease-in 0.2s;
@@ -22,15 +22,32 @@
         p {
             color: $purple;
         }
+
+        &:hover {
+            background-color: $purple;
+            p {
+                color: $yellow;
+            }
+    
+            transition: all ease-in 0.2s;
+        }
     }
 
-    &:hover {
+    &--purple {
         background-color: $purple;
+
         p {
             color: $yellow;
         }
 
-        transition: all ease-in 0.2s;
+        &:hover {
+            background-color: $yellow;
+            p {
+                color: $purple;
+            }
+    
+            transition: all ease-in 0.2s;
+        }
     }
 }
 
