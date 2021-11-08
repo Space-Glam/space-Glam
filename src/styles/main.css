@@ -976,16 +976,17 @@ input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.plan {
+.plansContent__reminder {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -999,6 +1000,29 @@ input[type=button] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 80px;
+}
+
+.plansContent__reminder p {
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  color: #4F4F4F;
+}
+
+.plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 350px;
 }
@@ -1026,7 +1050,16 @@ input[type=button] {
 }
 
 .plan__icon {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 94px;
   max-width: 94px;
 }
 
@@ -1078,6 +1111,7 @@ input[type=button] {
   border-radius: 30px;
   padding: 20px 25px;
   margin-bottom: 30px;
+  height: 100%;
 }
 
 .plan__benefits {
@@ -1107,6 +1141,7 @@ input[type=button] {
   font-size: 0.875rem;
   font-weight: 300;
   color: #4F4F4F;
+  margin-top: 10px;
   padding-left: 1em;
   text-indent: -1em;
 }
@@ -1212,6 +1247,7 @@ input[type=button] {
 .footerBanner__transition img {
   width: 100%;
   max-width: none;
+  display: block;
 }
 
 @media (max-width: 1160px) {

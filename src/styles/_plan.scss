@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     max-width: 350px;
 
@@ -20,7 +19,10 @@
     }
 
     &__icon {
-        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 94px;
         max-width: 94px;
 
         img {
@@ -63,6 +65,7 @@
         border-radius: 30px;
         padding: 20px 25px;
         margin-bottom: 30px;
+        height: 100%;
     }
 
     &__benefits {
@@ -82,6 +85,7 @@
             font-size: 0.875rem;
             font-weight: $light;
             color: $darkGray;
+            margin-top: 10px;
             padding-left: 1em;
             text-indent: -1em;
 
