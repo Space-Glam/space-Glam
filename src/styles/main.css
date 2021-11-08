@@ -1199,6 +1199,13 @@ input[type=button] {
     margin-bottom: 50px;
     margin-right: 0;
   }
+  .plan__content {
+    margin-bottom: 10px;
+  }
+  .plan .button {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .footerBanner {

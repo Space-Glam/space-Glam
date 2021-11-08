@@ -90,13 +90,15 @@
                                     <li>5 cursos presenciales.</li>
                                     <li>Ten un bono del 20% para que te realices un maquillaje profesional.</li>
                                     <li>Participar en en vivos con los expertos.</li>
-                                    <li>Refiere a un amigo a Space Glam y obtén un 10% de descuento en tu próximo mes.</li>
+                                    <li>Refiere a un amigo a Space Glam y obtén un 10% de descuento en tu próximo mes.
+                                    </li>
                                     <li>Visualización de logros que ha tenido el usuario y niveles de experticia.</li>
-                                    <li>Acceso al podcast  en Spotify donde se compartirá experiencias de vida con el maquillaje.</li>
+                                    <li>Acceso al podcast  en Spotify donde se compartirá experiencias de vida con el
+                                        maquillaje.</li>
                                 </ul>
                             </section>
                         </section>
-                        <button class="button button--purple">
+                        <button class="button button--purple planBtn">
                             <p>Me interesa plan #1</p>
                         </button>
                     </div>
@@ -125,13 +127,15 @@
                                     <li>Ten un bono del 50% para que te realices un maquillaje profesional.</li>
                                     <li>Participar en en vivos con los expertos.</li>
                                     <li>1 asesoría personalizada de maquillaje.</li>
-                                    <li>Refiere a un amigo a Space Glam y obtén un 20% de descuento en tu próximo mes.</li>
+                                    <li>Refiere a un amigo a Space Glam y obtén un 20% de descuento en tu próximo mes.
+                                    </li>
                                     <li>Visualización de logros que ha tenido el usuario y niveles de experticia.</li>
-                                    <li>Acceso al podcast  en Spotify donde se compartirá experiencias de vida con el maquillaje.</li>
+                                    <li>Acceso al podcast  en Spotify donde se compartirá experiencias de vida con el
+                                        maquillaje.</li>
                                 </ul>
                             </section>
                         </section>
-                        <button class="button button--purple">
+                        <button class="button button--purple planBtn">
                             <p>Me interesa plan #2</p>
                         </button>
                     </div>
@@ -162,20 +166,23 @@
                                     <li>Ser un anfitrión en los en vivos con los expertos.</li>
                                     <li>Calificar los cursos y a los expertos.</li>
                                     <li>Asesorías personalizada de maquillaje ilimitadas.</li>
-                                    <li>Refiere a un amigo a Space Glam y obtén  un 50% de descuento en tu próximo mes.</li>
+                                    <li>Refiere a un amigo a Space Glam y obtén un 50% de descuento en tu próximo mes.
+                                    </li>
                                     <li>Visualización de logros que ha tenido el usuario y niveles de experticia.</li>
-                                    <li>Acceso al podcast  en Spotify donde se compartirá experiencias de vida con el maquillaje.</li>
+                                    <li>Acceso al podcast  en Spotify donde se compartirá experiencias de vida con el
+                                        maquillaje.</li>
                                     <li>Ser parte del podcast de Space Glam.</li>
                                 </ul>
                             </section>
                         </section>
-                        <button class="button button--purple">
+                        <button class="button button--purple planBtn">
                             <p>Me interesa plan #3</p>
                         </button>
                     </div>
                 </section>
                 <section class="plansContent__reminder">
-                    <p>Recuerda que puedes obtener tu <span style="font-weight: 600;">prueba gratis</span> por <span style="font-weight: 600;">7 días</span> en el plan que prefieras.</p>
+                    <p>Recuerda que puedes obtener tu <span style="font-weight: 600;">prueba gratis</span> por <span
+                            style="font-weight: 600;">7 días</span> en el plan que prefieras.</p>
                     <img src="./public/img/emoji.svg" alt="">
                 </section>
             </section>
@@ -209,7 +216,8 @@
                         <p>Síguenos en redes</p>
                         <div class="siteMap__networks">
                             <a href=""><img src="./public/img/facebook.svg" alt=""></a>
-                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg" alt=""></a>
+                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg"
+                                    alt=""></a>
                         </div>
                     </section>
                 </section>
@@ -226,7 +234,8 @@
                         <p>Síguenos en redes</p>
                         <div class="siteMap__networks">
                             <a href=""><img src="./public/img/facebook.svg" alt=""></a>
-                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg" alt=""></a>
+                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg"
+                                    alt=""></a>
                         </div>
                     </section>
                     <section class="siteMap__column">
@@ -245,6 +254,24 @@
             </section>
         </article>
     </footer>
+    <div class="modal hidden">
+        <section class="modal__container">
+            <section class="modal__box">
+                <section class="modal__content">
+                    <h4 class="modal__title">
+                        ¡Gracias por tu voto!
+                    </h4>
+                    <img class="modal__emoji" src="./public/img/emoji.svg" alt="Happy">
+                    <p class="modal__text">
+                        Tu opinión es muy importante para nosotros
+                    </p>
+                </section>
+                <div class="modal__closeBtn">
+                    <img src="./public/img/equis.svg" alt="">
+                </div>
+            </section>
+        </section>
+    </div>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
@@ -266,7 +293,53 @@
         const analytics = getAnalytics(app);
         const db = getFirestore(app);
         const body = document.querySelector("body")
+        const modal = document.querySelector(".modal")
+        const modalcloseBtn = modal.querySelector(".modal__closeBtn")
+        const planBtns = document.querySelectorAll(".planBtn")
 
+        planBtns.forEach((e, i) => {
+            e.addEventListener("click", () => {
+                if (i == 0) {
+                    voteRegister(1, "Básico").then((ref) => {
+                        e.disabled = false;
+                        modal.classList.remove("hidden")
+                        body.classList.add("noOverflow")
+                    });
+                }
+                if (i == 1) {
+                    voteRegister(2, "Pro").then((ref) => {
+                        e.disabled = false;
+                        modal.classList.remove("hidden")
+                        body.classList.add("noOverflow")
+                    });
+                }
+                if (i == 2) {
+                    voteRegister(3, "Premium").then((ref) => {
+                        e.disabled = false;
+                        modal.classList.remove("hidden")
+                        body.classList.add("noOverflow")
+                    });
+                }
+            })
+        })
+
+        modalcloseBtn.addEventListener('click', () => {
+            modal.classList.add("hidden")
+            body.classList.remove("noOverflow")
+        })
+
+        async function voteRegister(planNumber, planName) {
+            try {
+                const docRef = await addDoc(collection(db, "votes"), {
+                    number: parseInt(planNumber),
+                    name: planName,
+                    date: Date.now()
+                });
+                console.log("Document written with ID: ", docRef.id);
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+        }
     </script>
 </body>
 

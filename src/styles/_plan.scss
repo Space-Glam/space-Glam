@@ -116,5 +116,14 @@
         max-width: 500px;
         margin-bottom: 50px;
         margin-right: 0;
+
+        &__content {
+            margin-bottom: 10px;
+        }
+
+        .button {
+            width: 100%;
+            max-width: none;
+        }
     }
 }
