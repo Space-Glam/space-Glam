@@ -37,41 +37,10 @@
 
 @media (max-width: 1020px) {
     .plansBanner {
-        background-position: 70%;
-
+        height: 200px;
         &__title {
             font-size: $fontSizeExpertTitle - 0.8;
         }
-
-        &__text {
-            font-family: $poppinsFont;
-            font-size: $fontSizeExpertText - 0.5;
-            color: white;
-            margin: 20px 0;
-        }
-
-        &__plans {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
     }
 }
 
-@media (max-width: 480px) {
-    .plansBanner {
-        .button {
-            max-width: none;
-        }
-    }
-}
-
-@media (max-width: 328px) {
-    .plansBanner {
-        .button {
-            p {
-                font-size: 1.2rem;
-            }
-        }
-    }
-}

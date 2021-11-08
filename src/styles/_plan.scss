@@ -4,6 +4,7 @@
     align-items: center;
     width: 100%;
     max-width: 350px;
+    margin-right: 10px;
 
     &__number {
         width: 99px;
@@ -94,5 +95,25 @@
                 padding-right: 5px;
             }
         }
+    }
+}
+
+@media (max-width: 985px) {
+    .plan {
+        &__content {
+            padding: 20px 10px;
+        }
+
+        .button {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 689px) {
+    .plan {
+        margin-bottom: 60px;
+        margin-right: 0;
     }
 }

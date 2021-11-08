@@ -27,7 +27,7 @@
 
     &__instructions {
         width: 100%;
-        
+
         p {
             font-family: $poppinsFont;
             font-size: $fontSizeRequirement;
@@ -59,6 +59,85 @@
             font-family: $poppinsFont;
             font-size: $fontSizeRequirement;
             color: $darkGray;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .plansContent {
+        &__description {
+            p {
+                font-size: $fontSizeExpertTitle - 0.8;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .plansContent {
+        &__container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &__description {
+            p {
+                font-size: $fontSizeExpertTitle - 1;
+            }
+        }
+
+        &__instructions {
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 689px) {
+    .plansContent {
+        &__plans {
+            padding-top: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__reminder {
+            padding-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .plansContent {
+        &__description {
+            padding-bottom: 0;
+            p {
+                font-size: $fontSizeExpertTitle - 1.2;
+            }
+        }
+
+        &__instructions {
+            p {
+                font-size: $fontSizeRequirement - 0.3;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .plansContent {
+        &__description {
+            padding-bottom: 0;
+            p {
+                font-size: $fontSizeExpertTitle - 1.5;
+            }
+        }
+
+        &__instructions {
+            p {
+                font-size: 0.9rem;
+            }
         }
     }
 }

@@ -886,39 +886,10 @@ input[type=button] {
 
 @media (max-width: 1020px) {
   .plansBanner {
-    background-position: 70%;
+    height: 200px;
   }
   .plansBanner__title {
     font-size: 1.7rem;
-  }
-  .plansBanner__text {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.375rem;
-    color: white;
-    margin: 20px 0;
-  }
-  .plansBanner__plans {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@media (max-width: 480px) {
-  .plansBanner .button {
-    max-width: none;
-  }
-}
-
-@media (max-width: 328px) {
-  .plansBanner .button p {
-    font-size: 1.2rem;
   }
 }
 
@@ -1012,6 +983,63 @@ input[type=button] {
   color: #4F4F4F;
 }
 
+@media (max-width: 1020px) {
+  .plansContent__description p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .plansContent__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .plansContent__description p {
+    font-size: 1.5rem;
+  }
+  .plansContent__instructions p {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 689px) {
+  .plansContent__plans {
+    padding-top: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .plansContent__reminder {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 610px) {
+  .plansContent__description {
+    padding-bottom: 0;
+  }
+  .plansContent__description p {
+    font-size: 1.3rem;
+  }
+  .plansContent__instructions p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .plansContent__description {
+    padding-bottom: 0;
+  }
+  .plansContent__description p {
+    font-size: 1rem;
+  }
+  .plansContent__instructions p {
+    font-size: 0.9rem;
+  }
+}
+
 .plan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1025,6 +1053,7 @@ input[type=button] {
           align-items: center;
   width: 100%;
   max-width: 350px;
+  margin-right: 10px;
 }
 
 .plan__number {
@@ -1149,6 +1178,23 @@ input[type=button] {
 .plan__list li:before {
   content: "-";
   padding-right: 5px;
+}
+
+@media (max-width: 985px) {
+  .plan__content {
+    padding: 20px 10px;
+  }
+  .plan .button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 689px) {
+  .plan {
+    margin-bottom: 60px;
+    margin-right: 0;
+  }
 }
 
 .footerBanner {
@@ -1868,7 +1914,7 @@ input[type=button] {
   outline: none;
   border: none;
   border-radius: 30px;
-  padding: 10px 30px;
+  padding: 15px 30px;
   width: 100%;
   max-width: 345px;
   -webkit-transition: all ease-in 0.2s;
