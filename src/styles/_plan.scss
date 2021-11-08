@@ -111,9 +111,10 @@
     }
 }
 
-@media (max-width: 689px) {
+@media (max-width: 731px) {
     .plan {
-        margin-bottom: 60px;
+        max-width: 500px;
+        margin-bottom: 50px;
         margin-right: 0;
     }
 }
