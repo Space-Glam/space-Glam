@@ -102,7 +102,8 @@
                         <p>Síguenos en redes</p>
                         <div class="siteMap__networks">
                             <a href=""><img src="./public/img/facebook.svg" alt=""></a>
-                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg" alt=""></a>
+                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg"
+                                    alt=""></a>
                         </div>
                     </section>
                 </section>
@@ -119,7 +120,8 @@
                         <p>Síguenos en redes</p>
                         <div class="siteMap__networks">
                             <a><img src="./public/img/facebook.svg" alt=""></a>
-                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg" alt=""></a>
+                            <a href="https://www.instagram.com/spaceglamrev/"><img src="./public/img/instagram.svg"
+                                    alt=""></a>
                         </div>
                     </section>
                     <section class="siteMap__column">
@@ -160,7 +162,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
         import { getFirestore } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
-        import { collection, doc, addDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
+        import { collection, doc, addDoc, setDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyB1s9J_ZqnSv02_-Ip02G_7JwEB8F83Row",
@@ -214,7 +216,15 @@
                 form.email.value = ""
             });
         })
-
+        
+        /*let userList = []
+        const q = query(collection(db, "users"))
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            userList.push(doc.data())
+            //console.log(doc.id, " => ", doc.data());
+        });
+        console.log(userList.length)*/
     </script>
 </body>
 
